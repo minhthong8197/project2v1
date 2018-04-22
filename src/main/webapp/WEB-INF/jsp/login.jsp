@@ -58,6 +58,7 @@
 							</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/uploadfile"> Upload</a></li>
 							<li><a href="/managepost"> Manage</a></li>
 							<li><a href="/newpost"> New post</a></li>
 							<li><a href="/logout">Logout</a></li>

@@ -58,6 +58,7 @@
 							</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/uploadfile"> Upload</a></li>
 							<li><a href="/managepost"> Manage</a></li>
 							<li><a href="/newpost"> New post</a></li>
 							<li><a href="/logout">Logout</a></li>
@@ -85,12 +86,12 @@
 								type="text" readonly value="${chosedpost.id}"> <label>Post
 								Name:</label> <input class="form-control" name=tittle type="text"
 								placeholder="Type Post Name" value="${chosedpost.tittle}">
-							<label>Category:</label> <select class="form-control"
+							<!-- <label>Category:</label> <select class="form-control"
 								name="cat_id">
 								<option value="1">Hướng Nghiệp</option>
 								<option value="2">Hợp Tác</option>
 								<option value="3">Phát Triển Sinh Viên</option>
-							</select> <label>Content:</label>
+							</select> <label>Content:</label> -->
 
 							<textarea class="form-control" id="editor" name="content"
 								rows="15" placeholder="Enter post content">${chosedpost.content}</textarea>

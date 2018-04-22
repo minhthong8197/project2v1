@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: project2v1 Maven Webapp
+Implementation-Title: project2v1
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: minht
 Implementation-Vendor-Id: minhthong
 Build-Jdk: 1.8.0_161
-Implementation-URL: http://maven.apache.org
+Implementation-URL: http://projects.spring.io/spring-boot/project2v1/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

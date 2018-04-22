@@ -7,7 +7,8 @@
 <head>
 <meta charset="utf-8">
 
-<title>ManagePost</title>
+<title>Up Load File</title>
+
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -26,7 +27,7 @@
 					</div>
 					<div class="col-md-3 col-sm-3 col-xs-12 center-block"
 						id="searchBox">
-						<form class="form-inline" role="form">
+						<form action="checklogin" class="form-inline" role="form">
 							<input style="width: 100%" type="text" class="form-control"
 								placeholder="Tìm kiếm"> <br /> <input
 								style="width: 100%" type="submit"
@@ -77,29 +78,22 @@
 		<div class="row">
 			<div class="container-fluid" id="content">
 				<!-- Left Collum -->
-				<div class="col-md-9 col-sm-10 col-xs-12" id="managerPost">
-					<h1 id="post_title">POST MANAGER</h1>
-					<div class="table-responsive">
-						<table class="table table-bodered">
-							<tr>
-								<th><strong>TT</strong></th>
-								<th><strong>Post name</strong></th>
-								<th><strong>Content</strong></th>
-								<th><strong>Edit</strong></th>
-								<th><strong>Delete</strong></th>
-							</tr>
-							<c:forEach items="${posts}" var="post">
-								<tr>
-									<td>${post.id}</td>
-									<td>${post.tittle}</td>
-									<td><a href="/loadpost?id=${post.id}">Xem nội dung</a></td>
-									<td><a href="/editpost?id=${post.id}"
-										class="btn btn-primary">Edit</a></td>
-									<td><a class="btn btn-danger">Delete</a></td>
-								</tr>
-							</c:forEach>
-						</table>
-					</div>
+				<div class="col-md-9 col-sm-10 col-xs-12">
+					<!-- sua doi action lại -->
+                    <form action="uploadfilehandling" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label>Chọn File:</label>
+                            <input name="file" type="file"/>
+                            <br />
+                            <label>Tên File:</label>
+                            <input name="filename" type="text" placeholder="Nhập tên file" class="form-control" />
+                            <br />
+                            <label>Tên Bucket:</label>
+                            <input name="bucketname" type="text" placeholder="Nhập tên bucket" class="form-control" />
+                            <br />
+                            <input style="max-width: 100px" type="submit" value="Upload" class="form-contro btn btn-success">
+                        </div>
+                    </form>
 				</div>
 
 				<!-- Right Collum -->
@@ -117,25 +111,22 @@
 				</div>
 			</div>
 			<!-- End Content -->
-		</div>
 
-
-		<br />
-
-		<!--Footer -->
-		<div class="row">
-			<div class="container-fluid footer" id="footer">
-				<p>4th International Conference on Green Technology and
-					Sustainable Development</p>
-				<p>HCMC University of Technology and Education</p>
-				<p>Add: No 1 Vo Van Ngan Street, Linh Chieu Ward, Thu Duc
-					District, Ho Chi Minh City</p>
-				<p>Tel: (+84.8) 37 221 223 - Ext: 8161 or 8443</p>
-				<p>E-mail: gtsd2018@hcmute.edu.vn</p>
+			<br />
+			<!--Footer -->
+			<div class="row">
+				<div class="container-fluid footer" id="footer">
+					<p>4th International Conference on Green Technology and
+						Sustainable Development</p>
+					<p>HCMC University of Technology and Education</p>
+					<p>Add: No 1 Vo Van Ngan Street, Linh Chieu Ward, Thu Duc
+						District, Ho Chi Minh City</p>
+					<p>Tel: (+84.8) 37 221 223 - Ext: 8161 or 8443</p>
+					<p>E-mail: gtsd2018@hcmute.edu.vn</p>
+				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 
 </html>

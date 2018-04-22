@@ -57,6 +57,7 @@
 							</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/uploadfile"> Upload</a></li>
 							<li><a href="/managepost"> Manage</a></li>
 							<li><a href="/newpost"> New post</a></li>
 							<li><a href="/logout">Logout</a></li>
@@ -83,14 +84,12 @@
 							<tr>
 								<th><strong>TT</strong></th>
 								<th><strong>Post name</strong></th>
-								<th><strong>Category</strong></th>
 								<th><strong>Content</strong></th>
 							</tr>
 							<c:forEach items="${posts}" var="post">
 								<tr>
 									<td>${post.id}</td>
 									<td>${post.tittle}</td>
-									<td>chức năng chưa hoàn thành</td>
 									<td><a href="/loadpost?id=${post.id}">Xem nội dung</a></td>
 								</tr>
 							</c:forEach>

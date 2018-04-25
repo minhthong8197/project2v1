@@ -1,0 +1,65 @@
+body 
+{
+	width: 85%;
+	margin: auto;
+}
+#logo{
+	max-height: 200px
+}
+#searchBox{
+	padding-top: 40px;
+	margin: center;
+}
+#post_title
+{
+	margin: center;
+	text-align: center;
+}
+
+#content
+{
+	background-color: white;
+	min-height: 500px;
+}
+#post
+{
+	background: cyan;
+	border-color: red;
+	border-style: solid;
+}
+form div
+{
+	padding: 5px;
+	text-align: center;
+}
+form div input
+{
+	width: 50%;
+	align-content: center;
+}
+#managerPost
+{
+	background-color: white;
+
+}
+th
+{
+	text-align: center;
+}
+td
+{
+	text-align: center;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    color: yellow;
+    text-align: left;
+}
+#footer p
+{
+	color: yellow;
+}

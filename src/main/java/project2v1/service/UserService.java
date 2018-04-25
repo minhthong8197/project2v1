@@ -1,4 +1,4 @@
-package project2v1.service;
+/*package project2v1.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,4 +37,4 @@ public class UserService {
 		}
 		return users;
 	}
-}
+}*/

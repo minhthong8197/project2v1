@@ -1,4 +1,4 @@
-package project2v1.controller;
+/*package project2v1.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -160,3 +160,4 @@ public class PostController {
 		}
 	}
 }
+*/

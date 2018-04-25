@@ -1,0 +1,5 @@
+amazonProperties: 
+  endpointUrl: http://s3.us.west.2.amazomaws.com
+  accessKey: AKIAJX5TXJAVQMCN37MA
+  secretKey: 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
+  bucketName: minhthongbucket

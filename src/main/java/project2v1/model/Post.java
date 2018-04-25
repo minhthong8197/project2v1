@@ -1,4 +1,4 @@
-package project2v1.model;
+/*package project2v1.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -63,4 +63,4 @@ public class Post {
 	public String toString() {
 		return "Post [id=" + id + ", tittle=" + tittle + ", content=" + content + "]";
 	}
-}
+}*/

@@ -1,4 +1,4 @@
-package project2v1.service;
+/*package project2v1.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,13 +39,14 @@ public class PostService {
 	public void delete(int id) {
 		repository.delete(id);
 	}
-	/*
+	
 	 * public Post findbytitle(String title) { for (Post p : repository.findAll()) {
 	 * if(p.getTittle().equals(title)); return p; } return null; }
-	 */
-	/*
+	 
+	
 	 * public List<String> findalltitle() { List<String> posttitles = new
 	 * ArrayList<>(); for (Post p : repository.findAll()) {
 	 * posttitles.add(p.getTittle()); } return posttitles; }
-	 */
+	 
 }
+*/

@@ -1,40 +1,23 @@
 package project2v1.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import project2v1.model.Post;
-import project2v1.service.PostService;
-import project2v1.service.UserService;
-import project2v1.upfile.UploadFile;
+import project2v1.upfile.AmazonService;
 
 @Controller
 public class UserInterface {
 
-	// Save the uploaded file to this folder
-	private static String UPLOADED_FOLDER = "D://temp/";
-
-	@Autowired
+	/*@Autowired
 	private UserService userservice;
 	@Autowired
-	private PostService postservice;
+	private PostService postservice;*/
+	private AmazonService amazonService;
 
-	@GetMapping("/")
+	/*@GetMapping("/")
 	public String home(HttpServletRequest request) {
 		List<Post> posts = new ArrayList<Post>();
 		for (Post p : postservice.findall()) {
@@ -73,30 +56,34 @@ public class UserInterface {
 		} else {
 			return "redirect:/login";
 		}
-	}
+	}*/
 
 	@GetMapping("/uploadfile")
 	public String upLoadFile() {
 		return "uploadfile";
 	}
 
+	@GetMapping("/uploadfilehandling")
+	public String upLoadHandling() {
+		return "redirect:/";
+	}
+	
 	@PostMapping("/uploadfilehandling")
-	public String uploadFileHandling(@RequestParam("file") MultipartFile file) {
-		if (file.isEmpty()) {
+	public String uploadFileHandling(@RequestParam("file")MultipartFile file) {
+		try {
+			amazonService = new AmazonService();
+			System.out.println("khoi tao xong amazonService");
+			amazonService.uploadFile(file);
+			System.out.println("up load file xong");
+		} catch (Exception e) {
+			System.out.println("loi up file tai controller");
 			return "redirect:/";
 		}
-
-		try {
-			// Get the file and save it somewhere
-			byte[] bytes = file.getBytes();
-			Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-			Files.write(path, bytes);
-			java.io.File up = new File(path.toString());
-			UploadFile upload = new UploadFile();
-			// upload.uploadFileHandling(up, "cpproject2");
-		} catch (IOException e) {
-			System.out.println("loi nua roi");
-		}
 		return "redirect:/";
+	}
+	
+	@GetMapping("/")
+	public String home() {
+		return "index";
 	}
 }

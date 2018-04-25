@@ -1,4 +1,4 @@
-package project2v1.model;
+/*package project2v1.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -43,4 +43,4 @@ public class User {
 	public String toString() {
 		return "User [user_name=" + user_name + ", user_pass=" + user_pass + "]";
 	}
-}
+}*/
